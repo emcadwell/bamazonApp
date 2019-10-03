@@ -1,16 +1,15 @@
 // npm requirements
 var inquirer = require("inquirer");
 var mysql = require("mysql");
-var consoleTableNPM = require("console.table");
+var table = require("cli-table2");
 // my password for mysql db connection - hidden
-var pw = require("password");
 
 // create mysql connection
 var connection = mysql.createConnection({
 	host: "localhost",
 	port: 3306,
 	user: "root",
-	password: pw.pw,
+	password: "password",
 	database: "bamazon_db"
 });
 
